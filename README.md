@@ -11,5 +11,9 @@
 * ### Forum App
 * ### . . .
 
+<br>
+
+## Contact Information
+-----
 Derek Jacketta
 <br>derekjacketta@gmail.com
