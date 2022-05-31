@@ -1,0 +1,19 @@
+[v-cloak] { 
+    display: none 
+}
+
+body {
+    box-sizing: border-box;
+}
+
+body #app .todo {
+    margin: 1rem;
+    padding: 1rem;
+    color: black;
+    font-size: 1rem;
+    border: 1px solid black;
+}
+
+body #app .todo input {
+    margin: 0rem;
+}

@@ -1,0 +1,20 @@
+[v-cloak] {
+	display: none;
+}
+
+body {
+    margin: 0;
+    background-color: #1f1f1f;
+    user-select: none;
+}
+
+body #app #page {
+    width: 100vw;
+    height: 100vh;
+}
+
+body #app #page #rules-box {
+    display: inline-block;
+    color: white;
+    width: 300px;
+}

@@ -1,0 +1,49 @@
+[v-cloak] {
+	display: none;
+}
+
+body {
+    margin: 0rem;
+    background: linear-gradient(11deg, rgba(0,0,0,1) 0%, rgb(14, 43, 22) 100%);
+    background-repeat: no-repeat;
+    font-family: 'Roboto Mono';
+}
+
+body #app {
+    height: 100vh;
+    width: inherit;
+}
+
+body #app #eight-ball {
+    margin: auto auto;
+    border-radius: 100%;
+    background-color: black;
+    height: 70vh;
+    width: 70vh;
+    text-align: center;
+}
+
+body #app #eight-ball #response-area {
+    display: inline-flex;
+    align-items:center;
+    justify-content:center;
+    text-align: center;
+    
+    margin-top: 24.5vh;
+    height: 20vh;
+    width: 20vh;
+    border-radius: 100%;
+    border: 1vh solid #111;
+    background-image: radial-gradient(rgb(0, 61, 61), rgb(0, 0, 0));
+    overflow: hidden;
+}
+
+body #app #eight-ball #response-area #response {
+    display: inline;
+    vertical-align: middle;
+    margin: auto;
+    color: rgba(226, 150, 226, 1);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 1s;
+}
