@@ -14,6 +14,5 @@
 <br>
 
 ## Contact Information
------
 Derek Jacketta
 <br>derekjacketta@gmail.com
