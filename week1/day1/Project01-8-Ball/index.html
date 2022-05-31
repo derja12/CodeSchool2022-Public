@@ -8,14 +8,23 @@
         <title>Magic Eight Ball</title>
     </head>
     <body>
-        <div id="app">
+        <div id="app" v-cloak>
+
             <div id="eight-ball">
                 <div id="response-area">
-                    <div id="response" v-cloak>
+                    <div id="response" :style="responseStyle">
                         {{ displayResponse }}
                     </div>
                 </div>
             </div>
+            
+            <div id="question-area">
+                Question: <input v-model="questionInput" @keydown.enter="askQuestion">
+                <br><button v-if="validQuestion" @click="askQuestion">Ask Question</button>
+                <div v-else-if="questionInput.length <= 0">Waiting for a question...</div>
+                <div v-else>Questions usually end with a '?'</div>
+            </div>
+        
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
         <script src="app.js"></script>

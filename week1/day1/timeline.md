@@ -158,10 +158,21 @@ for (i = 0; i < albums.length; i++) {
 # Hour 2
 
 Project 1 - Magic 8-ball
+<br> &emsp; Set up the 8-ball with Text/positioning and coloring (no vue yet)
+<br> &emsp; SET UP VUE / Get some responses set up and askQuestion function
+<br> &emsp; &emsp; DATA - ```responsePrompts, defaultPrompt, responseIndex, displayResponse```
+<br> &emsp; &emsp; METHODS - ```askQuestion, updateDisplayResponse```
+<br> &emsp; &emsp; CREATED - ```this.updateDisplayResponse();```
+
+<br><br>
 
 # Hour 3
 
-(?) Project 2 - Dice Set
+Project 1 - Magic 8-ball
+<br> &emsp; Set up question input
+<br> &emsp; Set up reactive question feedback (```v-if's and v-else's```)
+
+<br><br>
 
 # Hour 4
 

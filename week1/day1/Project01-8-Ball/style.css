@@ -4,15 +4,21 @@
 
 body {
     margin: 0rem;
-    background: linear-gradient(11deg, rgba(0,0,0,1) 0%, rgb(14, 43, 22) 100%);
-    background-repeat: no-repeat;
+    background-color: black;
     font-family: 'Roboto Mono';
 }
 
 body #app {
-    height: 100vh;
+    height: calc(100vh - 2rem);
+    padding-top: 2rem;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(14, 43, 22) 50%);
+    background-color: rgb(14, 43, 22);
+    background-repeat: no-repeat;
     width: inherit;
 }
+
+
+/* #region ========= EIGHT BALL ========= */
 
 body #app #eight-ball {
     margin: auto auto;
@@ -42,8 +48,23 @@ body #app #eight-ball #response-area #response {
     display: inline;
     vertical-align: middle;
     margin: auto;
-    color: rgba(226, 150, 226, 1);
+    /* color: rgba(226, 150, 226, 1); */
     font-size: 1rem;
     font-weight: 500;
     transition: 1s;
 }
+
+/* #endregion */
+
+/* #region ========= QUESTION AREA ========= */
+
+body #app #question-area {
+    width: 25rem;
+    margin: 5rem auto;
+    padding: 1rem;
+    color: white;
+    background-color: rgb(14, 43, 22);
+    text-align: center;
+}
+
+/* #endregion */
