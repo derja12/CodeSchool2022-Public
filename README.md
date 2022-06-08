@@ -2,17 +2,17 @@
 
 ## Week 1
 * ### Magic Eight Ball
-* ### Dice Rolling
+* ### Album Charter
 * ### Todo App
-* ### . . .
 
 ## Week 2
-* ### Maze Game Demo
+* ### Webstore Application
+* ### Maze Game
 * ### Forum App
-* ### . . .
 
 <br>
 
 ## Contact Information
-Derek Jacketta
-<br>derekjacketta@gmail.com
+Code School - codeschool@dixie.edu
+<br><br>
+Derek Jacketta - derekjacketta@gmail.com

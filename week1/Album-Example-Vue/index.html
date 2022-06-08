@@ -6,9 +6,9 @@
     </head>
     <body>
         <div id="app">
-            <div v-for="album in albums">
-                <div class='title'>{{ album.title }}</div>
-                <div class='artist'>{{ album.artist }}</div>
+            <div v-for="(album, index) in albums">
+                <div v-on:click="selectIndex(index)" class='title'>{{ album.title }}</div>
+                <div v-if="selectedIndex == index" class='artist'>{{ album.artist }}</div>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>

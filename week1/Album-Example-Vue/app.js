@@ -6,6 +6,12 @@ var app = new Vue({
             {title: "Pale Communion", artist: "Opeth"},
             {title: "Marked For Death", artist: "Emma Ruth Rundle"},
             {title: "Deadwing", artist: "Porcupine Tree"}
-        ]
+        ],
+        selectedIndex: -1
+    },
+    methods: {
+        selectIndex: function (index) {
+            this.selectedIndex = index;
+        }
     }
 });
