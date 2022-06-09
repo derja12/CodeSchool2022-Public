@@ -28,19 +28,26 @@ var app = new Vue({
 
 
         // Question Data
-        questionInput: ""
+        questionInput: "",
+        readyForQuestion: true
 
     },
     methods: {
         askQuestion: function () {
             if (!this.validQuestion) {return;}
 
+            this.questionInput = "";
+            this.readyForQuestion = false;
+
             this.responseStyle.color = textTransparent;
             this.currentResponseIndex = Math.floor(Math.random() * this.responsePrompts.length);
             
             setTimeout(() => {
                 this.updateDisplayResponse();
-                this.responseStyle.color = textPurple;                
+                this.responseStyle.color = textPurple;
+                setTimeout(() => {
+                    this.readyForQuestion = true;
+                }, 1000);
             }, 2500);
         },
         updateDisplayResponse: function () {

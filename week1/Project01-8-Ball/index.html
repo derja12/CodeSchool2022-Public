@@ -18,7 +18,7 @@
                 </div>
             </div>
             
-            <div id="question-area">
+            <div id="question-area" v-show="readyForQuestion">
                 Question: <input v-model="questionInput" @keydown.enter="askQuestion">
                 <br><button v-if="validQuestion" @click="askQuestion">Ask Question</button>
                 <div v-else-if="questionInput.length <= 0">Waiting for a question...</div>
