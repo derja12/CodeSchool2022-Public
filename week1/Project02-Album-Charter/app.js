@@ -56,6 +56,7 @@ var app = new Vue({
             if (this.heldAlbum < 0) { return; }
             
             let insertAlbum = this.pickedAlbums[this.heldAlbum];
+            if (index >= this.pickedAlbums.length) { index = this.pickedAlbums.length - 1; }
 
             this.pickedAlbums.splice(this.heldAlbum, 1);
             this.pickedAlbums.splice(index, 0, insertAlbum);

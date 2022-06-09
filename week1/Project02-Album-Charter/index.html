@@ -19,13 +19,12 @@
         <div id="divider"></div>
         <div id="right-column">
             <div id="album-area">
-                <div v-for="index in 42" :class="getPlaceholderClass(index-1)" class="album-holder">
+                <div v-for="index in 42" @mouseup="dropAlbum(index-1)" :class="getPlaceholderClass(index-1)" class="album-holder">
                     <img 
                         v-if="index-1 < pickedAlbums.length" 
                         draggable="false" 
                         @mousedown="pickupAlbum(index-1)" 
                         @mouseover="hoverAlbum(index-1)" 
-                        @mouseup="dropAlbum(index-1)" 
                         @dblclick="removeAlbum(index-1)" 
                         class="picked-album" 
                         :src="pickedAlbums[index-1].strAlbumThumb">

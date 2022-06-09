@@ -91,11 +91,6 @@ body #app #right-column #album-area {
     user-select: none;
 }
 
-body #app #right-column #album-area .album-holder {
-    display: inline-block;
-    border: 1px solid black;
-}
-
 /* body #app #right-column #text-area {
 
 } */
@@ -109,20 +104,22 @@ body #app #right-column #album-area .picked-album {
     border: 1px solid red;
 }
 
+body #app #right-column #album-area .album-holder {
+    display: inline-block;
+    border: 1px solid black;
+    background-color: var(--placeholder-gray);
+}
 
 .top-10 {
     width: calc(18% - 2px);
     aspect-ratio: 1 / 1;
     margin: 1%;
-    background-color: var(--placeholder-gray);
 } .top-22 {
     width: calc(15% - 2px);
     aspect-ratio: 1 / 1;
     margin: .83333333333%;
-    background-color: var(--placeholder-gray);
 } .top-42 {
     width: calc(9% - 2px);
     aspect-ratio: 1 / 1;
     margin: .5%;
-    background-color: var(--placeholder-gray);
 }
