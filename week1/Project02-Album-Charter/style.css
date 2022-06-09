@@ -2,6 +2,10 @@
     display: none 
 }
 
+:root {
+    --placeholder-gray: rgb(20, 20, 20);
+}
+
 body {
     background-color: black;
     color: white;
@@ -89,7 +93,7 @@ body #app #right-column #album-area {
 
 body #app #right-column #album-area .album-holder {
     display: inline-block;
-    border: 1px solid gray;
+    border: 1px solid black;
 }
 
 body #app #right-column #text-area {
@@ -98,7 +102,7 @@ body #app #right-column #text-area {
 body #app #right-column #album-area .picked-album {
     width: calc(100% - 2px);
     display: block;
-    border: 1px solid gray;
+    border: 1px solid black;
 } body #app #right-column #album-area .picked-album:hover {
     cursor: pointer;
     border: 1px solid red;
@@ -109,17 +113,15 @@ body #app #right-column #album-area .picked-album {
     width: calc(18% - 2px);
     aspect-ratio: 1 / 1;
     margin: 1%;
-    background-color: rgb(40,40,40);
-
-    display: inline-block;
+    background-color: var(--placeholder-gray);
 } .top-22 {
     width: calc(15% - 2px);
     aspect-ratio: 1 / 1;
     margin: .83333333333%;
-    background-color: rgb(40,40,40);
+    background-color: var(--placeholder-gray);
 } .top-42 {
     width: calc(9% - 2px);
     aspect-ratio: 1 / 1;
     margin: .5%;
-    background-color: rgb(40,40,40);
+    background-color: var(--placeholder-gray);
 }
