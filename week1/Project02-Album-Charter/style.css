@@ -72,9 +72,9 @@ body #app #left-column #search-album-area .search-album {
 
 /* ================== DIVIDER COLLUMN ================== */
 
-body #app #divider {
+/* body #app #divider {
 
-}
+} */
 
 
 /* ================== RIGHT COLLUMN ================== */
@@ -96,8 +96,9 @@ body #app #right-column #album-area .album-holder {
     border: 1px solid black;
 }
 
-body #app #right-column #text-area {
-}
+/* body #app #right-column #text-area {
+
+} */
 
 body #app #right-column #album-area .picked-album {
     width: calc(100% - 2px);
