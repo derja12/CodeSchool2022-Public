@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Album Charter</title>
+</head>
+<body>
+    <div id="app" v-cloak>
+        <div id="left-column">
+            <h1>Album Charter</h1>
+            <div id="input-area">
+                <input v-model="searchInput">
+                <button v-on:click="fetchAlbumsBySearch">Search</button>
+            </div>
+            <div id="search-album-area" v-show="searchAlbums.length > 0" :style="{gridTemplateRows: 'repeat(' + (Math.round(searchAlbums.length / 3) + 1) + ', min-content)'}">
+                <img v-for="(album, index) in searchAlbums" class="search-album" :src="album.strAlbumThumb" @click="pickAlbum(index)">
+            </div>
+        </div>
+        <div id="divider"></div>
+        <div id="right-column">
+            <div id="album-area">
+                <div v-for="index in 42" :class="getPlaceholderClass(index-1)" class="album-holder">
+                    <img 
+                        v-if="index-1 < pickedAlbums.length" 
+                        draggable="false" 
+                        @mousedown="pickupAlbum(index-1)" 
+                        @mouseover="hoverAlbum(index-1)" 
+                        @mouseup="dropAlbum(index-1)" 
+                        @dblclick="removeAlbum(index-1)" 
+                        class="picked-album" 
+                        :src="pickedAlbums[index-1].strAlbumThumb">
+                </div>
+            </div>
+            <div id="text-area">
+               <div v-for="(album, index) in pickedAlbums">
+                   {{ index + 1 }}. {{ album.strArtist }} - {{ album.strAlbum }}
+               </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

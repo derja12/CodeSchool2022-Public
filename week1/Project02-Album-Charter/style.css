@@ -1,0 +1,125 @@
+[v-cloak] { 
+    display: none 
+}
+
+body {
+    background-color: black;
+    color: white;
+    margin: 0rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body #app {
+    background-color: #000;
+    height: calc(100vh - 4rem);
+    margin: 2rem;
+
+    display: grid;
+    grid-template-columns: 3fr .5fr 7fr;
+}
+
+/* ================== LEFT COLLUMN ================== */ /* #region */
+
+body #app #left-column {
+    border: 1px solid rgba(255,255,255,.4);
+    height: inherit;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content auto;
+}
+
+body #app #left-column h1 {
+    text-align: center;
+}
+
+body #app #left-column #input-area {
+    margin: 1rem auto;
+}
+
+body #app #left-column #input-area input {
+    display: inline-block;
+    /* width: inherit; */
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+body #app #left-column button {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+body #app #left-column #search-album-area {
+    grid-row: 3 / 4;
+
+    width: initial;
+    overflow-y: scroll;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content;
+}
+
+body #app #left-column #search-album-area .search-album {
+    width: 100%;
+} .search-album:hover {
+    cursor: pointer;
+}
+/* #endregion */
+
+/* ================== DIVIDER COLLUMN ================== */
+
+body #app #divider {
+
+}
+
+
+/* ================== RIGHT COLLUMN ================== */
+
+
+body #app #right-column {
+    border: 1px solid rgba(255,255,255,.4);
+
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+}
+
+body #app #right-column #album-area {
+    user-select: none;
+}
+
+body #app #right-column #album-area .album-holder {
+    display: inline-block;
+    border: 1px solid gray;
+}
+
+body #app #right-column #text-area {
+}
+
+body #app #right-column #album-area .picked-album {
+    width: calc(100% - 2px);
+    display: block;
+    border: 1px solid gray;
+} body #app #right-column #album-area .picked-album:hover {
+    cursor: pointer;
+    border: 1px solid red;
+}
+
+
+.top-10 {
+    width: calc(18% - 2px);
+    aspect-ratio: 1 / 1;
+    margin: 1%;
+    background-color: rgb(40,40,40);
+
+    display: inline-block;
+} .top-22 {
+    width: calc(15% - 2px);
+    aspect-ratio: 1 / 1;
+    margin: .83333333333%;
+    background-color: rgb(40,40,40);
+} .top-42 {
+    width: calc(9% - 2px);
+    aspect-ratio: 1 / 1;
+    margin: .5%;
+    background-color: rgb(40,40,40);
+}
