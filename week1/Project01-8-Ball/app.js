@@ -1,5 +1,6 @@
 const textPurple = "rgba(226, 150, 226, 1)";
 const textTransparent = "rgba(226, 150, 226, 0)";
+const API_URL = "https://cs2022-eight-ball.herokuapp.com";
 
 var app = new Vue({
     el: '#app',
@@ -33,22 +34,40 @@ var app = new Vue({
 
     },
     methods: {
+        // askQuestion: function () {
+        //     if (!this.validQuestion) {return;}
+
+        //     this.questionInput = "";
+        //     this.readyForQuestion = false;
+
+        //     this.responseStyle.color = textTransparent;
+        //     this.currentResponseIndex = Math.floor(Math.random() * this.responsePrompts.length);
+            
+        //     setTimeout(() => {
+        //         this.updateDisplayResponse();
+        //         this.responseStyle.color = textPurple;
+        //         setTimeout(() => {
+        //             this.readyForQuestion = true;
+        //         }, 1000);
+        //     }, 2500);
+        // },
         askQuestion: function () {
             if (!this.validQuestion) {return;}
 
+            fetch(`${API_URL}/questions`).then((response) => {
+                response.json().then((data) => {
+                    this.responseStyle.color = textTransparent;
+                    setTimeout(() => {
+                        this.displayResponse = data['answer'];
+                        this.responseStyle.color = data['color'];
+                        setTimeout(() => {
+                            this.readyForQuestion = true;
+                        }, 1000);
+                    }, 2500);
+                });
+            });
             this.questionInput = "";
             this.readyForQuestion = false;
-
-            this.responseStyle.color = textTransparent;
-            this.currentResponseIndex = Math.floor(Math.random() * this.responsePrompts.length);
-            
-            setTimeout(() => {
-                this.updateDisplayResponse();
-                this.responseStyle.color = textPurple;
-                setTimeout(() => {
-                    this.readyForQuestion = true;
-                }, 1000);
-            }, 2500);
         },
         updateDisplayResponse: function () {
             let index = this.currentResponseIndex;
