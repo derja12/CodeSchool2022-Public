@@ -1,0 +1,106 @@
+[v-cloak] {
+	display: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body, main {
+    width: 100%;
+    height: 100%;
+}
+
+body #app {
+    display: grid;
+    grid-template-columns: 3fr 1fr 7fr;
+
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+/* ========================= LEFT COLUMN ========================= */
+
+body #app #left-column {
+    grid-row: 1 / 1;
+    grid-column: 1 / 2;
+
+    max-height: initial;
+    overflow-y: auto;
+
+    border: 1px solid rgb(140, 140, 140);
+    text-align: center;
+}
+
+body #app #left-column h1 {
+    padding: 1rem;
+}
+
+body #app #left-column #search-album-area {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+body #app #left-column #search-album-area img {
+    width: 33.33333%;
+    aspect-ratio: 1 / 1;
+}
+
+body #app #middle-column {
+    grid-row: 1 / 1;
+    grid-column: 2 / 3;
+}
+
+body #app #right-column {
+    grid-row: 1 / 1;
+    grid-column: 3 / 4;
+
+    max-height: initial;
+    overflow-y: hidden;
+ 
+    border: 1px solid rgb(140, 140, 140);
+    display: flex;
+}
+
+body #app #right-column #picked-album-area {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body #app #right-column #picked-album-area .picked-album-slot {
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(140, 140, 140);
+    aspect-ratio: 1 / 1;
+} 
+
+body #app #right-column #picked-album-area .picked-album-slot .picked-album {
+    height: 100%;
+    width: 100%;
+    border-radius: 1%;
+} .picked-album:hover {
+    border: 1px solid red;
+}
+
+body #app #right-column #picked-album-area .top-10 {
+    width: calc( 100% / 5);
+}
+
+body #app #right-column #picked-album-area .top-22 {
+    width: calc( 100% / 6 );
+}
+
+body #app #right-column #picked-album-area .top-42 {
+    width: calc( 100% / 10 );
+}
+
+body #app #right-column #previously-ol {
+    padding: .5rem;
+    min-width: 16rem;
+    border-left: 1px solid rgba(0,0,0,.5);
+}
