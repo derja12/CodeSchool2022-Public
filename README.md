@@ -7,8 +7,10 @@
 
 ## Week 2
 * ### Webstore Application
-* ### Maze Game
 * ### Forum App
+
+## Extra
+* ### Maze Game (instructions found [here](https://github.com/derja12/CodeSchool2022-MazeGame))
 
 <br>
 
